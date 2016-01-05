@@ -8,8 +8,8 @@ public:
         for (int i=0; i<n; i++) {
         	int tr = r, tg = g, tb = b;
         	r = costs[i][0]+min(tg, tb);
-        	g = costs[i][0]+min(tr, tb);
-        	b = costs[i][0]+min(tr, tg);
+        	g = costs[i][1]+min(tr, tb);
+        	b = costs[i][2]+min(tr, tg);
         }
         return min(r, min(g, b));
     } 
