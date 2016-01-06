@@ -1,0 +1,104 @@
+// Concept
+
+***** Array & Linked list
+
+**Array: 
+
+Operations:
+get(index): O(1)
+add/remove(element): O(1) or O(n) (worst case)
+1. The size of array is fixed, so we need to know the upper limit on the number of elements in advance.
+
+2. Inserting a new element in an array is expensive, because room has to be created for the new element and to create room for existing elements that have to shift.
+
+3. Deleting is also expensive, for example, to delete an element at position 1000 in an array, everthing after 1000 has to be moved.
+
+4. Random access is allowed, access any element we want immediately.
+
+**Linked list:
+
+Operations:
+get(index): O(n)
+add/remove(element): O(1)
+
+1. It is dynamic size, it is easier to insert and delete compared with array.
+
+2. Random access is not allowed, we have to traverse from the head node to the node we want, so we can't do binary search with linked lists.
+
+***** Hash table & Hash map & Tree map & Linked hash map
+
+**Hash table:
+
+Operations:
+Roughly equivalent to hash map, except hash map is not synchronized and permits null.
+
+1. It is a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets, from which the wanted value can be found.
+
+2. Ideally, the hash function will assign each key to a unique bucket, but it is possible that two keys point to the same bucket, so most hash table have collision resolution.
+
+**Hash map: implemented as a hash table, no ordering on keys or values.
+
+Operations:
+put: O(1), O(n) (when has collision)
+get/remove: O(1)
+allow null keys and values
+
+**Tree map: implemented based on red-black tree, ordered by key.
+
+Operation:
+put/get/remove: O(logn)
+sorted by keys
+only allow values to be null
+
+**Linked hash map: preserves insertion order.
+
+Operations:
+subclass of hash map
+linked list preserves the insertion order
+allow null keys and values
+
+***** Set & List & Map
+
+**Set: unordered collection, unique objects, contains at most one null.
+
+**List: ordered collection, access by index and search, may contain duplicates, user has control over where element inserted.
+
+**Map: objects that maps keys to values, no duplicated allowed, a key can map to at most one value.
+
+***** BST & Hash table
+**BST: insert and retrieve: O(logn), store data sorted, no need to know size of input in advance, memory efficient: do not reserve more memory than they need to.
+
+**Hash table: insert and retrieve: O(1), elements stored unsorted, with more inputs collisions may show up, need more space than input data if avoid collision, need to know data size otherwise need to resize the table.
+
+***** BFS & DFS
+Overview: search algorithms for graphs and trees, used for unordered graph and trees.
+
+**BFS: start with root node, scan each node in each level (scan neighbors first) then go to next level.
+
+**DFS: start with root node, follow on branch as far as possible until the target is found or hit a leaf node.
+
+Comparision: BFS uses a large amount of memory because need to store pointers to a level, DFS uses less memory because no need to store all children pointers at a level.
+
+***** Tree & Graph
+**Tree: tree is a restricted form of a graph, tree has direction (parent and children), tree has no cycles, a child can only have one parent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
